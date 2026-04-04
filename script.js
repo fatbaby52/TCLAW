@@ -321,7 +321,7 @@ const faqSchema = {
             "name": "How do I schedule a consultation with Tony Carlos?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Contact the office at (530) 645-2551 to schedule your consultation. Tony Carlos Law is available 24/7 for emergencies."
+                "text": "Contact the office at (530) 645-2551 to schedule your consultation."
             }
         }
     ]
