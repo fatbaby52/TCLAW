@@ -1,0 +1,15 @@
+User-agent: *
+
+# Block admin and login paths
+Disallow: /admin/
+Disallow: /login/
+
+# Block pages that shouldn't be indexed
+Disallow: /thank-you.html
+Disallow: /practice-areas/criminal-defense/google-ads.html
+
+# Allow everything else
+Allow: /
+
+# Sitemap location
+Sitemap: https://tonycarloslaw.com/sitemap.xml
