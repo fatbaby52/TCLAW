@@ -110,6 +110,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
 
+            // Push form submission event to dataLayer for GTM/GA4
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'form_submission',
+                'form_name': 'contact_form',
+                'case_type': data['case-type'] || 'not_specified'
+            });
+
             // Form will submit to Formspree if validation passes
         });
     }
@@ -151,8 +159,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Phone click tracking (for analytics)
     document.querySelectorAll('a[href^="tel:"]').forEach(link => {
         link.addEventListener('click', function() {
-            // In production, send to analytics
-            console.log('Phone call initiated:', this.href);
+            const phoneNumber = this.href.replace('tel:', '');
+            // Push to dataLayer for GTM/GA4
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'phone_click',
+                'phone_number': phoneNumber,
+                'click_location': this.closest('section')?.className || 'unknown'
+            });
         });
     });
 
