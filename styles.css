@@ -11,9 +11,11 @@
     --bg: #ffffff;
     --bg-alt: #f2f2f2;
     --bg-dark: #272525;
-    --bg-lavender: #dadbf1;
     --border: #E5E0DF;
     --border-card: #c0c1d7;
+    --success: #4ade80;
+    --yelp-red: #FF1A1A;
+    --yelp-red-hover: #E00000;
     --shadow: 0 0.125em 0.25em -0.0625em rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 0.25em 0.75em -0.125em rgba(0, 0, 0, 0.08);
     --radius: 0.6em;
@@ -32,6 +34,55 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Skip Link for Accessibility */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    z-index: 9999;
+    text-decoration: none;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 1rem;
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* Focus-visible styles for better keyboard navigation */
+:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 16px;
@@ -46,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     line-height: 1.25;
     letter-spacing: -0.03em;
-    color: #000000;
+    color: var(--secondary);
 }
 
 a {
@@ -100,8 +151,8 @@ ul {
 }
 
 .btn-primary:hover {
-    background: #6e74ca;
-    border-color: #6e74ca;
+    background: var(--primary-light);
+    border-color: var(--primary-light);
     color: white;
 }
 
@@ -206,7 +257,7 @@ ul {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0.5rem;
+    padding: 0.75rem;
 }
 
 .mobile-menu-btn span {
@@ -308,7 +359,7 @@ ul {
 }
 
 .hero-highlights svg {
-    color: #4ade80;
+    color: var(--success);
     flex-shrink: 0;
 }
 
@@ -387,7 +438,7 @@ ul {
 
 .trust-items {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     text-align: center;
 }
@@ -742,7 +793,7 @@ section {
 /* Yelp Card Specific Styles */
 .yelp-card {
     background: white;
-    border: 2px solid #FF1A1A;
+    border: 1px solid var(--yelp-red);
 }
 
 .yelp-header {
@@ -776,7 +827,7 @@ section {
 }
 
 .yelp-stars {
-    color: #FF1A1A;
+    color: var(--yelp-red);
     font-size: 1.25rem;
     letter-spacing: 2px;
 }
@@ -819,7 +870,7 @@ section {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    background: #FF1A1A;
+    background: var(--yelp-red);
     color: white;
     padding: 0.875rem 1.5rem;
     border-radius: var(--radius);
@@ -829,7 +880,7 @@ section {
 }
 
 .yelp-button:hover {
-    background: #E00000;
+    background: var(--yelp-red-hover);
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(255, 26, 26, 0.3);
@@ -1040,161 +1091,9 @@ section {
     }
 }
 
-/* Legacy testimonial styles kept for other pages */
-.testimonials {
-    padding: 5rem 0;
-    background: var(--bg-alt);
-    overflow: hidden;
-}
-
-.testimonial-carousel {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.testimonial-track {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.testimonial-card {
-    box-sizing: border-box;
-}
-
-@media (max-width: 1024px) {
-    .testimonial-track {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .testimonial-track {
-        grid-template-columns: 1fr;
-    }
-}
-
-.testimonial-inner {
-    background: white;
-    border-radius: var(--radius);
-    padding: 2rem;
-    box-shadow: var(--shadow);
-    border: 1px solid var(--border-card);
-    text-align: center;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.testimonial-photo {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    border: 3px solid var(--bg-alt);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    background: linear-gradient(135deg, #272525 0%, #3a3838 100%);
-}
-
-.testimonial-avatar {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-    border: 3px solid var(--bg-alt);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #fff;
-    letter-spacing: 0.5px;
-}
-
-.testimonial-inner blockquote {
-    margin: 0;
-    font-style: italic;
-    color: var(--text);
-    line-height: 1.7;
-    font-size: 1rem;
-    flex-grow: 1;
-}
-
-.testimonial-author {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border);
-}
-
-.testimonial-author strong {
-    display: block;
-    color: var(--secondary);
-    font-weight: 600;
-    font-size: 0.95rem;
-}
-
-.testimonial-author span {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-}
-
-.testimonial-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.testimonial-prev,
-.testimonial-next {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: var(--transition);
-    color: var(--text);
-}
-
-.testimonial-prev:hover,
-.testimonial-next:hover {
-    background: var(--primary);
-    border-color: var(--primary);
-    color: white;
-}
-
-.testimonial-dots {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.testimonial-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--border);
-    border: none;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.testimonial-dot.active {
-    background: var(--primary);
-}
-
 /* Service Areas */
 .service-areas {
-    background: #272525;
+    background: var(--secondary);
     color: white;
 }
 
@@ -1361,6 +1260,22 @@ section {
     font-size: 0.85rem;
     color: var(--text-muted);
     margin-top: 1rem;
+}
+
+/* Inline form error messages */
+.form-error {
+    display: block;
+    color: #dc2626;
+    font-size: 0.85rem;
+    margin-top: 0.35rem;
+    font-weight: 500;
+}
+
+.form-group input[aria-invalid="true"],
+.form-group select[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
 }
 
 /* Contact Map */

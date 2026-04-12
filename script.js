@@ -1,5 +1,10 @@
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
+    // Dynamic copyright year
+    const copyrightYear = document.getElementById('copyright-year');
+    if (copyrightYear) {
+        copyrightYear.textContent = new Date().getFullYear();
+    }
     // Click-to-load TikTok embed (saves ~12MB of resources until user requests it)
     const loadTiktokBtn = document.getElementById('load-tiktok-btn');
     if (loadTiktokBtn) {
@@ -32,6 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenuBtn.addEventListener('click', function() {
             navLinks.classList.toggle('active');
             mobileMenuBtn.classList.toggle('active');
+            // Toggle aria-expanded for accessibility
+            const isExpanded = navLinks.classList.contains('active');
+            mobileMenuBtn.setAttribute('aria-expanded', isExpanded.toString());
         });
 
         // Close menu when clicking a link
@@ -45,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Header scroll effect
     const header = document.querySelector('.header');
-    let lastScroll = 0;
 
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
@@ -55,8 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
         }
-
-        lastScroll = currentScroll;
     });
 
     // Smooth scroll for anchor links
@@ -76,18 +81,58 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form submission handler with validation
+    // Form submission handler with inline validation
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
+        // Helper function to show inline error
+        function showError(input, message) {
+            clearError(input);
+            const error = document.createElement('span');
+            error.className = 'form-error';
+            error.textContent = message;
+            error.setAttribute('role', 'alert');
+            input.setAttribute('aria-invalid', 'true');
+            input.parentNode.appendChild(error);
+            input.focus();
+        }
+
+        // Helper function to clear error
+        function clearError(input) {
+            input.setAttribute('aria-invalid', 'false');
+            const existingError = input.parentNode.querySelector('.form-error');
+            if (existingError) existingError.remove();
+        }
+
+        // Clear errors on input
+        contactForm.querySelectorAll('input, select, textarea').forEach(field => {
+            field.addEventListener('input', () => clearError(field));
+            field.addEventListener('change', () => clearError(field));
+        });
+
         contactForm.addEventListener('submit', function(e) {
             // Get form data
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
 
+            // Clear all previous errors
+            this.querySelectorAll('.form-error').forEach(err => err.remove());
+            this.querySelectorAll('[aria-invalid]').forEach(el => el.setAttribute('aria-invalid', 'false'));
+
             // Basic validation
-            if (!data.name || !data.phone || !data['case-type']) {
+            const nameInput = this.querySelector('[name="name"]');
+            const phoneInput = this.querySelector('[name="phone"]');
+            const caseTypeInput = this.querySelector('[name="case-type"]');
+            const emailInput = this.querySelector('[name="email"]');
+
+            if (!data.name) {
                 e.preventDefault();
-                alert('Please fill in all required fields.');
+                showError(nameInput, 'Please enter your name.');
+                return;
+            }
+
+            if (!data.phone) {
+                e.preventDefault();
+                showError(phoneInput, 'Please enter your phone number.');
                 return;
             }
 
@@ -95,7 +140,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const phoneRegex = /^[\d\s\-\(\)\.+]+$/;
             if (!phoneRegex.test(data.phone)) {
                 e.preventDefault();
-                alert('Please enter a valid phone number.');
+                showError(phoneInput, 'Please enter a valid phone number.');
+                return;
+            }
+
+            if (!data['case-type']) {
+                e.preventDefault();
+                showError(caseTypeInput, 'Please select a case type.');
                 return;
             }
 
@@ -105,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailRegex.test(emailValue)) {
                     e.preventDefault();
-                    alert('Please enter a valid email address.');
+                    showError(emailInput, 'Please enter a valid email address.');
                     return;
                 }
             }
@@ -235,114 +286,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Testimonial Carousel
-    const carousel = document.querySelector('.testimonial-carousel');
-    if (carousel) {
-        const track = carousel.querySelector('.testimonial-track');
-        const cards = carousel.querySelectorAll('.testimonial-card');
-        const prevBtn = carousel.querySelector('.testimonial-prev');
-        const nextBtn = carousel.querySelector('.testimonial-next');
-        const dotsContainer = carousel.querySelector('.testimonial-dots');
-
-        let currentIndex = 0;
-        let cardsPerView = window.innerWidth >= 768 ? 2 : 1;
-        const totalSlides = Math.ceil(cards.length / cardsPerView);
-
-        // Create dots
-        for (let i = 0; i < totalSlides; i++) {
-            const dot = document.createElement('button');
-            dot.classList.add('testimonial-dot');
-            if (i === 0) dot.classList.add('active');
-            dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-            dot.addEventListener('click', () => goToSlide(i));
-            dotsContainer.appendChild(dot);
-        }
-
-        const dots = dotsContainer.querySelectorAll('.testimonial-dot');
-
-        function updateCarousel() {
-            const cardWidth = 100 / cardsPerView;
-            track.style.transform = `translateX(-${currentIndex * cardWidth}%)`;
-
-            // Update dots
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentIndex);
-            });
-        }
-
-        function goToSlide(index) {
-            currentIndex = index;
-            updateCarousel();
-        }
-
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            updateCarousel();
-        }
-
-        function prevSlide() {
-            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-            updateCarousel();
-        }
-
-        prevBtn.addEventListener('click', prevSlide);
-        nextBtn.addEventListener('click', nextSlide);
-
-        // Auto-advance every 5 seconds
-        let autoPlay = setInterval(nextSlide, 5000);
-
-        // Pause on hover
-        carousel.addEventListener('mouseenter', () => clearInterval(autoPlay));
-        carousel.addEventListener('mouseleave', () => {
-            autoPlay = setInterval(nextSlide, 5000);
-        });
-
-        // Handle resize
-        window.addEventListener('resize', () => {
-            const newCardsPerView = window.innerWidth >= 768 ? 2 : 1;
-            if (newCardsPerView !== cardsPerView) {
-                cardsPerView = newCardsPerView;
-                currentIndex = 0;
-                updateCarousel();
-            }
-        });
-    }
 });
 
-// Structured Data for FAQ (can be expanded)
-const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-        {
-            "@type": "Question",
-            "name": "What areas does Tony Carlos Law serve?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Tony Carlos Law serves Yuba City, Marysville, and the surrounding areas including Sutter County, Yuba County, Colusa County, Butte County, and other Northern California communities."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "What types of cases does Tony Carlos handle?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Tony Carlos handles criminal defense cases including DUI/DWI, drug crimes, theft, assault, domestic violence, felonies, and misdemeanors. He also handles immigration law matters including family-based immigration, green cards, deportation defense, and naturalization."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "How do I schedule a consultation with Tony Carlos?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Contact the office at (530) 645-2551 to schedule your consultation."
-            }
-        }
-    ]
-};
-
-// Add FAQ schema to page
-const faqScript = document.createElement('script');
-faqScript.type = 'application/ld+json';
-faqScript.textContent = JSON.stringify(faqSchema);
-document.head.appendChild(faqScript);

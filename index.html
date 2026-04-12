@@ -23,11 +23,28 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tonycarloslaw.com">
     <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_US">
     <meta property="og:image" content="https://tonycarloslaw.com/Tony%20Carlos%20Law%20Logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Tony Carlos Law - Criminal Defense & Immigration Attorney">
+    <meta property="og:site_name" content="Tony Carlos Law">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tony Carlos Law | Criminal Defense & Immigration Attorney">
+    <meta name="twitter:description" content="Former prosecutor turned defense advocate. Criminal defense and immigration services in Yuba City & Marysville. Se habla español.">
+    <meta name="twitter:image" content="https://tonycarloslaw.com/Tony%20Carlos%20Law%20Logo.png">
+
+    <!-- Spanish alternate description for search engines -->
+    <meta name="description" lang="es" content="Tony Carlos Law - Abogado de defensa criminal e inmigración sirviendo Yuba City, Marysville, y el norte de California. Ex fiscal con más de 15 años de experiencia. Llame (530) 645-2551. Se habla español.">
 
     <title>Tony Carlos Law | Criminal Defense & Immigration Attorney | Yuba City & Marysville</title>
 
     <link rel="canonical" href="https://tonycarloslaw.com">
+    <link rel="alternate" hreflang="en" href="https://tonycarloslaw.com">
+    <link rel="alternate" hreflang="es" href="https://tonycarloslaw.com">
+    <link rel="alternate" hreflang="x-default" href="https://tonycarloslaw.com">
     <!-- Preload hero background for faster LCP -->
     <link rel="preload" as="image" href="hero-bg.webp" type="image/webp" fetchpriority="high">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -41,7 +58,7 @@
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:16px;line-height:1.6;letter-spacing:-.02em;color:var(--text);background:var(--bg)}
-    h1,h2,h3,h4,h5,h6{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;line-height:1.25;letter-spacing:-.03em;color:#000}
+    h1,h2,h3,h4,h5,h6{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;line-height:1.25;letter-spacing:-.03em;color:#272525}
     a{color:var(--primary);text-decoration:none;transition:var(--transition)}
     img{max-width:100%;height:auto}
     ul{list-style:none}
@@ -97,12 +114,31 @@
     {
         "@context": "https://schema.org",
         "@type": "LegalService",
+        "@id": "https://tonycarloslaw.com/#organization",
         "name": "Law Office of Tony Carlos",
         "alternateName": "Tony Carlos Law",
-        "description": "Criminal defense and immigration attorney serving Yuba City, Marysville, Sutter County, and Yuba County, California.",
+        "description": "Criminal defense and immigration attorney serving Yuba City, Marysville, Sutter County, and Yuba County, California. Former prosecutor with 15+ years experience.",
         "url": "https://tonycarloslaw.com",
         "telephone": "+1-530-645-2551",
         "email": "joseph.carlos.76@gmail.com",
+        "logo": {
+            "@type": "ImageObject",
+            "@id": "https://tonycarloslaw.com/#logo",
+            "url": "https://tonycarloslaw.com/Tony%20Carlos%20Law%20Logo.png",
+            "width": 280,
+            "height": 87
+        },
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://tonycarloslaw.com/Tony%20Headshot.jpg",
+            "width": 560,
+            "height": 680
+        },
+        "sameAs": [
+            "https://www.yelp.com/biz/law-office-of-tony-carlos-marysville",
+            "https://www.tiktok.com/@tony_carlos_law",
+            "https://members.calbar.ca.gov/fal/Licensee/Detail/267547"
+        ],
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "500 Olive St",
@@ -144,6 +180,23 @@
         ],
         "priceRange": "$$",
         "openingHours": "Mo-Fr 09:00-17:00",
+        "foundingDate": "2009",
+        "knowsAbout": [
+            "Criminal Defense",
+            "DUI Defense",
+            "DWI Defense",
+            "Drug Crimes",
+            "Theft Crimes",
+            "Assault Defense",
+            "Domestic Violence Defense",
+            "Felony Defense",
+            "Misdemeanor Defense",
+            "Expungements",
+            "Immigration Law",
+            "Deportation Defense",
+            "Immigration Court",
+            "Asylum Cases"
+        ],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Legal Services",
@@ -152,32 +205,284 @@
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Criminal Defense"
+                        "name": "Criminal Defense",
+                        "description": "Aggressive defense representation for DUI, drug crimes, theft, assault, domestic violence, felonies, and misdemeanors."
                     }
                 },
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Immigration Law"
+                        "name": "Immigration Law",
+                        "description": "Immigration court representation, deportation defense, asylum cases, and work permit issues."
                     }
                 }
             ]
         },
-        "founder": {
-            "@type": "Person",
-            "name": "Joseph Anthony Carlos",
-            "jobTitle": "Attorney at Law",
-            "alumniOf": {
-                "@type": "CollegeOrUniversity",
-                "name": "McGeorge School of Law, University of the Pacific"
-            }
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "3",
+            "reviewCount": "3"
         },
-        "knowsLanguage": ["English", "Spanish"]
+        "review": [
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Lisa S."
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "reviewBody": "My public defender tried to get me to plead to a felony, I hired Tony and he took it to jury trial and got a not guilty verdict."
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Tommy W."
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "reviewBody": "I pled to a charge at arraignment that I wasn't comfortable with, then I hired Tony and he filed a motion to withdraw my plea and got me the deal I needed."
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Alfredo R."
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "reviewBody": "I always had a direct line of communication to Tony, anytime I need to talk about my case. I recommend him to anyone I know who needs a defense attorney."
+            }
+        ],
+        "founder": {
+            "@id": "https://tonycarloslaw.com/#attorney"
+        },
+        "employee": {
+            "@id": "https://tonycarloslaw.com/#attorney"
+        },
+        "knowsLanguage": ["English", "Spanish"],
+        "availableLanguage": [
+            {
+                "@type": "Language",
+                "name": "English",
+                "alternateName": "en"
+            },
+            {
+                "@type": "Language",
+                "name": "Spanish",
+                "alternateName": "es"
+            }
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-530-645-2551",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Spanish"],
+            "areaServed": ["US-CA"]
+        }
+    }
+    </script>
+
+    <!-- Attorney Schema for E-E-A-T Trustworthiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Attorney",
+        "@id": "https://tonycarloslaw.com/#attorney",
+        "name": "Joseph Anthony Carlos",
+        "alternateName": "Tony Carlos",
+        "description": "Former Sutter County prosecutor turned criminal defense attorney. Over 15 years of legal experience serving Yuba City, Marysville, and Northern California.",
+        "url": "https://tonycarloslaw.com",
+        "image": "https://tonycarloslaw.com/Tony%20Headshot.jpg",
+        "telephone": "+1-530-645-2551",
+        "email": "joseph.carlos.76@gmail.com",
+        "sameAs": [
+            "https://members.calbar.ca.gov/fal/Licensee/Detail/267547",
+            "https://www.yelp.com/biz/law-office-of-tony-carlos-marysville",
+            "https://www.tiktok.com/@tony_carlos_law"
+        ],
+        "jobTitle": "Criminal Defense & Immigration Attorney",
+        "worksFor": {
+            "@id": "https://tonycarloslaw.com/#organization"
+        },
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "@id": "https://law.pacific.edu/#organization",
+            "name": "McGeorge School of Law, University of the Pacific",
+            "url": "https://law.pacific.edu",
+            "sameAs": "https://en.wikipedia.org/wiki/McGeorge_School_of_Law"
+        },
+        "hasCredential": [
+            {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "Professional License",
+                "name": "California State Bar License",
+                "recognizedBy": {
+                    "@type": "Organization",
+                    "name": "State Bar of California",
+                    "url": "https://www.calbar.ca.gov"
+                },
+                "identifier": "267547",
+                "url": "https://members.calbar.ca.gov/fal/Licensee/Detail/267547"
+            }
+        ],
+        "memberOf": {
+            "@type": "Organization",
+            "name": "State Bar of California",
+            "url": "https://www.calbar.ca.gov"
+        },
+        "knowsAbout": [
+            "Criminal Defense Law",
+            "DUI/DWI Defense",
+            "Drug Crime Defense",
+            "Immigration Law",
+            "Deportation Defense",
+            "California Criminal Procedure",
+            "Sutter County Courts",
+            "Yuba County Courts"
+        ],
+        "knowsLanguage": ["English", "Spanish"],
+        "areaServed": [
+            "Yuba City, California",
+            "Marysville, California",
+            "Sutter County, California",
+            "Yuba County, California"
+        ]
+    }
+    </script>
+
+    <!-- FAQ Schema (moved from JavaScript for reliable AI parsing) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What areas does Tony Carlos Law serve?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tony Carlos Law serves Yuba City, Marysville, and the surrounding areas including Sutter County, Yuba County, Colusa County, Butte County, and other Northern California communities."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What types of cases does Tony Carlos handle?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tony Carlos handles criminal defense cases including DUI/DWI, drug crimes, theft, assault, domestic violence, felonies, and misdemeanors. He also handles immigration law matters including deportation defense, immigration court representation, asylum cases, and work permit issues."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I schedule a consultation with Tony Carlos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Contact the office at (530) 645-2551 to schedule your consultation. Se habla español - bilingual staff is available."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Tony Carlos a licensed attorney in California?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, Tony Carlos is a licensed attorney with the State Bar of California (Bar Number 267547). His license can be verified at the California State Bar website."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Tony Carlos's legal background?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tony Carlos graduated from McGeorge School of Law at the University of the Pacific. He began his legal career as a Deputy District Attorney (prosecutor) at the Sutter County DA's Office before becoming a criminal defense attorney. He has over 15 years of legal experience."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://tonycarloslaw.com/#website",
+        "name": "Tony Carlos Law",
+        "url": "https://tonycarloslaw.com",
+        "description": "Criminal defense and immigration attorney serving Yuba City, Marysville, and Northern California",
+        "publisher": {
+            "@id": "https://tonycarloslaw.com/#organization"
+        },
+        "inLanguage": ["en-US", "es-US"]
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://tonycarloslaw.com"
+            }
+        ]
+    }
+    </script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://tonycarloslaw.com/#webpage",
+        "url": "https://tonycarloslaw.com",
+        "name": "Tony Carlos Law | Criminal Defense & Immigration Attorney | Yuba City & Marysville",
+        "description": "Former prosecutor turned defense advocate. Criminal defense and immigration attorney serving Yuba City, Marysville, Sutter County, and Yuba County, California.",
+        "isPartOf": {
+            "@id": "https://tonycarloslaw.com/#website"
+        },
+        "about": {
+            "@id": "https://tonycarloslaw.com/#organization"
+        },
+        "mainEntity": {
+            "@id": "https://tonycarloslaw.com/#organization"
+        },
+        "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://tonycarloslaw.com/Tony%20Headshot.jpg"
+        },
+        "datePublished": "2009-01-01",
+        "dateModified": "2024-12-01",
+        "inLanguage": "en-US",
+        "potentialAction": {
+            "@type": "ReadAction",
+            "target": "https://tonycarloslaw.com"
+        }
     }
     </script>
 </head>
 <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT6XCCV8"
     height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
@@ -193,12 +498,12 @@
                         <img src="Tony Carlos Logo Really Big.png" alt="Tony Carlos Law - Criminal Defense & Immigration Attorney in Yuba City" class="logo-img" width="280" height="87" fetchpriority="high">
                     </picture>
                 </a>
-                <button class="mobile-menu-btn" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
                 </button>
-                <ul class="nav-links">
+                <ul class="nav-links" id="nav-links">
                     <li><a href="#about" data-en="About" data-es="Sobre Nosotros">About</a></li>
                     <li><a href="#practice-areas" data-en="Practice Areas" data-es="Areas de Practica">Practice Areas</a></li>
                     <li><a href="#why-choose" data-en="Why Choose Us" data-es="Por Que Elegirnos">Why Choose Us</a></li>
@@ -216,7 +521,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
     <!-- Hero Section -->
     <section class="hero">
         <picture class="hero-bg-picture">
@@ -232,21 +537,21 @@
                 <p class="hero-text" data-en="After graduating law school, Tony became a Deputy District Attorney at the Sutter County DAs Office. His experience as a former prosecutor gives him a unique advantage in anticipating the government's strategy and building the strongest possible defense." data-es="Despues de graduarse de la facultad de derecho, Tony se convirtio en Fiscal Adjunto en la Oficina del Fiscal del Distrito del Condado de Sutter. Su experiencia como ex fiscal le da una ventaja unica para anticipar la estrategia del gobierno y construir la defensa mas fuerte posible.">After graduating law school, Tony became a Deputy District Attorney at the Sutter County DAs Office. His experience as a former prosecutor gives him a unique advantage in anticipating the government's strategy and building the strongest possible defense.</p>
                 <ul class="hero-highlights">
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                        <span data-en="California State Bar Member #267547" data-es="Miembro del Colegio de Abogados de California #267547">California State Bar Member #267547</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <a href="https://members.calbar.ca.gov/fal/Licensee/Detail/267547" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-decoration-style: dotted;" data-en="California State Bar Member #267547 ↗" data-es="Miembro del Colegio de Abogados de California #267547 ↗">California State Bar Member #267547 ↗</a>
                     </li>
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                         <span data-en="Former Sutter County Prosecutor" data-es="Ex Fiscal del Condado de Sutter">Former Sutter County Prosecutor</span>
                     </li>
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                         <span data-en="Bilingual Staff (English & Spanish)" data-es="Personal Bilingue (Ingles y Espanol)">Bilingual Staff (English & Spanish)</span>
                     </li>
                 </ul>
                 <div class="hero-cta">
                     <a href="tel:530-645-2551" class="btn btn-primary btn-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                         (530) 645-2551
                     </a>
                     <a href="#contact" class="btn btn-outline btn-lg" data-en="Schedule a Consultation" data-es="Programe una Consulta">Schedule a Consultation</a>
@@ -262,6 +567,7 @@
             <div class="testimonials-v2__header">
                 <p class="section-label" data-en="Client Stories" data-es="Historias de Clientes">Client Stories</p>
                 <h2 data-en="Real Results for Real People" data-es="Resultados Reales para Personas Reales">Real Results for Real People</h2>
+                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 0.5rem;" data-en="Past results do not guarantee future outcomes. Every case is different." data-es="Los resultados pasados no garantizan resultados futuros. Cada caso es diferente.">Past results do not guarantee future outcomes. Every case is different.</p>
             </div>
 
             <div class="testimonials-v2__grid">
@@ -309,7 +615,7 @@
                 <p class="spanish-note" data-en="Se habla español. Call to speak with our office." data-es="Se habla español. Llame para hablar con nuestra oficina.">Se habla español. Call to speak with our office.</p>
                 <div class="need-help-cta">
                     <a href="tel:530-645-2551" class="btn btn-primary btn-lg" data-en="Call Now" data-es="Llame Ahora">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                         Call Now
                     </a>
                 </div>
@@ -327,21 +633,21 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                     </div>
                     <h3 data-en="You Speak With Our Office" data-es="Habla Con Nuestra Oficina">You Speak With Our Office</h3>
                     <p data-en="Call us to start the conversation. Our bilingual staff is ready to help." data-es="Llamenos para iniciar la conversacion. Nuestro personal bilingue esta listo para ayudar.">Call us to start the conversation. Our bilingual staff is ready to help.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                     </div>
                     <h3 data-en="We Listen to Your Situation" data-es="Escuchamos Su Situacion">We Listen to Your Situation</h3>
                     <p data-en="We take the time to understand your case and what you are facing." data-es="Tomamos el tiempo para entender su caso y lo que esta enfrentando.">We take the time to understand your case and what you are facing.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                     </div>
                     <h3 data-en="We Explain Your Options" data-es="Explicamos Sus Opciones">We Explain Your Options</h3>
                     <p data-en="We help you understand your options and walk you through what comes next." data-es="Le ayudamos a entender sus opciones y lo guiamos en los proximos pasos.">We help you understand your options and walk you through what comes next.</p>
@@ -359,8 +665,8 @@
                     <span class="trust-label" data-en="Years Experience" data-es="Anos de Experiencia">Years Experience</span>
                 </div>
                 <div class="trust-item">
-                    <span class="trust-number">1000+</span>
-                    <span class="trust-label" data-en="Cases Handled" data-es="Casos Manejados">Cases Handled</span>
+                    <span class="trust-number">5.0</span>
+                    <span class="trust-label" data-en="Star Rating on Yelp" data-es="Calificacion en Yelp">Star Rating on Yelp</span>
                 </div>
             </div>
         </div>
@@ -399,7 +705,7 @@
                 <!-- Criminal Defense -->
                 <div class="practice-card">
                     <div class="practice-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
                     </div>
                     <h3 data-en="Criminal Defense" data-es="Defensa Criminal">Criminal Defense</h3>
                     <p data-en="Aggressive defense representation for all criminal charges in Yuba City, Marysville, and surrounding areas." data-es="Representacion de defensa agresiva para todos los cargos criminales en Yuba City, Marysville y areas circundantes.">Aggressive defense representation for all criminal charges in Yuba City, Marysville, and surrounding areas.</p>
@@ -419,7 +725,7 @@
                 <!-- Immigration -->
                 <div class="practice-card">
                     <div class="practice-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
                     </div>
                     <h3 data-en="Immigration Court and Deportation Defense" data-es="Corte de Inmigracion y Defensa contra Deportacion">Immigration Court and Deportation Defense</h3>
                     <p data-en="If you or a family member is dealing with immigration court or facing deportation, call our office to discuss your situation. We help clients understand their options and take the next step." data-es="Si usted o un familiar esta lidiando con la corte de inmigracion o enfrenta deportacion, llame a nuestra oficina para discutir su situacion. Ayudamos a los clientes a entender sus opciones y dar el siguiente paso.">If you or a family member is dealing with immigration court or facing deportation, call our office to discuss your situation. We help clients understand their options and take the next step.</p>
@@ -446,42 +752,42 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                     </div>
                     <h3 data-en="Prosecutor's Insight" data-es="Perspectiva de Fiscal">Prosecutor's Insight</h3>
                     <p data-en="As a former Sutter County prosecutor, Tony knows how the government builds cases and can anticipate their strategies to build the strongest defense." data-es="Como ex fiscal del Condado de Sutter, Tony sabe como el gobierno construye casos y puede anticipar sus estrategias para construir la defensa mas fuerte.">As a former Sutter County prosecutor, Tony knows how the government builds cases and can anticipate their strategies to build the strongest defense.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                     </div>
                     <h3 data-en="Direct Communication" data-es="Comunicacion Directa">Direct Communication</h3>
                     <p data-en="Work directly with Tony, not a paralegal or assistant. You'll have his personal attention and direct access throughout your case." data-es="Trabaje directamente con Tony, no con un asistente legal. Tendra su atencion personal y acceso directo durante todo su caso.">Work directly with Tony, not a paralegal or assistant. You'll have his personal attention and direct access throughout your case.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                     </div>
                     <h3 data-en="Fast Response" data-es="Respuesta Rapida">Fast Response</h3>
                     <p data-en="Get answers to your questions quickly. Call today to discuss your case and understand your options." data-es="Obtenga respuestas a sus preguntas rapidamente. Llame hoy para discutir su caso y entender sus opciones.">Get answers to your questions quickly. Call today to discuss your case and understand your options.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                     </div>
                     <h3 data-en="Local Knowledge" data-es="Conocimiento Local">Local Knowledge</h3>
                     <p data-en="15+ years serving Yuba City, Marysville, and surrounding communities. Deep relationships with local courts and understanding of local procedures." data-es="Mas de 15 anos sirviendo a Yuba City, Marysville y comunidades circundantes. Relaciones profundas con los tribunales locales y comprension de los procedimientos locales.">15+ years serving Yuba City, Marysville, and surrounding communities. Deep relationships with local courts and understanding of local procedures.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
                     </div>
                     <h3 data-en="Dual Practice" data-es="Practica Dual">Dual Practice</h3>
                     <p data-en="Unique expertise in both criminal defense and immigration law, crucial when criminal charges may affect immigration status." data-es="Experiencia unica en defensa criminal y ley de inmigracion, crucial cuando los cargos criminales pueden afectar el estatus migratorio.">Unique expertise in both criminal defense and immigration law, crucial when criminal charges may affect immigration status.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
                     </div>
                     <h3>Se Habla Español</h3>
                     <p data-en="Bilingual staff ensures clear communication in English or Spanish. We understand the unique needs of our diverse community." data-es="Personal bilingue asegura comunicacion clara en ingles o español. Entendemos las necesidades unicas de nuestra comunidad diversa.">Bilingual staff ensures clear communication in English or Spanish. We understand the unique needs of our diverse community.</p>
@@ -501,19 +807,19 @@
                 <!-- TikTok Card (click-to-load for performance) -->
                 <div class="social-card" id="tiktok-container">
                     <h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
                         TikTok
                     </h3>
                     <div class="tiktok-embed-wrapper" id="tiktok-embed-placeholder" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 2rem;">
                         <p style="color: var(--text-light); margin: 0; text-align: center;" data-en="Watch our legal tips and client testimonials" data-es="Mira nuestros consejos legales y testimonios de clientes">Watch our legal tips and client testimonials</p>
                         <button id="load-tiktok-btn" class="btn btn-secondary" style="cursor: pointer;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
                             <span data-en="Load TikTok Feed" data-es="Cargar TikTok">Load TikTok Feed</span>
                         </button>
                     </div>
                     <a href="https://www.tiktok.com/@tony_carlos_law" target="_blank" rel="noopener noreferrer" class="social-link" data-en="Follow on TikTok" data-es="Siguenos en TikTok">
                         Follow on TikTok
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                     </a>
                 </div>
 
@@ -528,8 +834,8 @@
                     <div class="yelp-content">
                         <h4>Law Office of Tony Carlos</h4>
                         <div class="yelp-rating">
-                            <div class="yelp-stars">
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            <div class="yelp-stars" role="img" aria-label="5 out of 5 stars">
+                                <span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span><span aria-hidden="true">★</span>
                             </div>
                             <span class="yelp-count">5.0 Stars</span>
                         </div>
@@ -540,7 +846,7 @@
                         </div>
                     </div>
                     <a href="https://www.yelp.com/biz/law-office-of-tony-carlos-marysville" target="_blank" rel="noopener noreferrer" class="yelp-button" data-en="Read Our Reviews on Yelp" data-es="Lee Nuestras Resenas en Yelp">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21.111 18.226c-.141.969-2.119 3.483-3.029 3.847-.311.124-.611.094-.85-.09-.154-.12-.314-.396-2.586-4.146-.123-.203-.158-.452-.098-.689.061-.241.207-.443.411-.569.623-.386 1.054-.39 1.397-.011.158.175 2.129 3.218 2.338 3.503.155.209.391.204.547.009.259-.323.09-.639-.128-.961l-2.229-3.264c-.129-.189-.149-.439-.054-.658a.725.725 0 0 1 .492-.42c.357-.107.665-.037.946.213.089.079 2.826 3.236 2.843 3.236zm-5.427-5.647a.878.878 0 0 1-.319.624c-.5.396-.989.263-1.32-.168-.167-.218-3.513-6.46-3.654-6.741-.189-.378-.05-.759.339-.975.953-.531 3.563-1.253 4.617-1.224.36.01.643.142.845.392.157.196.196.403.15.611-.062.285-1.252 5.32-1.356 5.689-.032.116-.151.526-.15.55-.002.088.086.245.848 1.242zm-5.134.898c.058-.233.167-.44.325-.617.162-.181.381-.278.642-.283 1.003-.018 1.304.498 1.238.957-.038.264-1.053 4.863-1.164 5.216-.091.294-.27.521-.529.672-.847.497-3.947 1.035-4.909.748-.323-.096-.554-.294-.672-.577-.081-.193-.067-.402.026-.591.084-.169 3.921-5.29 4.053-5.478.002-.001.046-.069.047-.073l.106-.215a.764.764 0 0 0 .087-.348c.006-.093-.029-.195-.148-.337a1.137 1.137 0 0 1-.25-.438c-.07-.268.018-.55.251-.706.078-.052.171-.083.284-.091.209-.013.432.068.632.224.078.06.14.129.181.199zm-3.317-1.985c.044.321-.068.628-.308.832-.093.079-5.451 3.395-5.746 3.541-.393.194-.765.066-.966-.336-.498-.998-.96-3.757-.744-4.767.074-.345.261-.595.543-.726.193-.09.412-.091.635-.003.249.098 5.412 2.456 5.624 2.575.183.103.31.27.389.458a.902.902 0 0 1 .072.363c.001.02.001.04.001.063z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.111 18.226c-.141.969-2.119 3.483-3.029 3.847-.311.124-.611.094-.85-.09-.154-.12-.314-.396-2.586-4.146-.123-.203-.158-.452-.098-.689.061-.241.207-.443.411-.569.623-.386 1.054-.39 1.397-.011.158.175 2.129 3.218 2.338 3.503.155.209.391.204.547.009.259-.323.09-.639-.128-.961l-2.229-3.264c-.129-.189-.149-.439-.054-.658a.725.725 0 0 1 .492-.42c.357-.107.665-.037.946.213.089.079 2.826 3.236 2.843 3.236zm-5.427-5.647a.878.878 0 0 1-.319.624c-.5.396-.989.263-1.32-.168-.167-.218-3.513-6.46-3.654-6.741-.189-.378-.05-.759.339-.975.953-.531 3.563-1.253 4.617-1.224.36.01.643.142.845.392.157.196.196.403.15.611-.062.285-1.252 5.32-1.356 5.689-.032.116-.151.526-.15.55-.002.088.086.245.848 1.242zm-5.134.898c.058-.233.167-.44.325-.617.162-.181.381-.278.642-.283 1.003-.018 1.304.498 1.238.957-.038.264-1.053 4.863-1.164 5.216-.091.294-.27.521-.529.672-.847.497-3.947 1.035-4.909.748-.323-.096-.554-.294-.672-.577-.081-.193-.067-.402.026-.591.084-.169 3.921-5.29 4.053-5.478.002-.001.046-.069.047-.073l.106-.215a.764.764 0 0 0 .087-.348c.006-.093-.029-.195-.148-.337a1.137 1.137 0 0 1-.25-.438c-.07-.268.018-.55.251-.706.078-.052.171-.083.284-.091.209-.013.432.068.632.224.078.06.14.129.181.199zm-3.317-1.985c.044.321-.068.628-.308.832-.093.079-5.451 3.395-5.746 3.541-.393.194-.765.066-.966-.336-.498-.998-.96-3.757-.744-4.767.074-.345.261-.595.543-.726.193-.09.412-.091.635-.003.249.098 5.412 2.456 5.624 2.575.183.103.31.27.389.458a.902.902 0 0 1 .072.363c.001.02.001.04.001.063z"/></svg>
                         Read Our Reviews on Yelp
                     </a>
                 </div>
@@ -605,7 +911,7 @@
 
                     <div class="contact-details">
                         <div class="contact-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                             <div>
                                 <strong data-en="Phone" data-es="Telefono">Phone</strong>
                                 <a href="tel:530-645-2551">(530) 645-2551</a>
@@ -613,7 +919,7 @@
                             </div>
                         </div>
                         <div class="contact-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                             <div>
                                 <strong data-en="Office" data-es="Oficina">Office</strong>
                                 <span>500 Olive St</span>
@@ -621,7 +927,7 @@
                             </div>
                         </div>
                         <div class="contact-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                             <div>
                                 <strong data-en="Hours" data-es="Horario">Hours</strong>
                                 <span data-en="Monday - Friday: 9am - 5pm" data-es="Lunes - Viernes: 9am - 5pm">Monday - Friday: 9am - 5pm</span>
@@ -643,7 +949,7 @@
                             title="Tony Carlos Law Office Location">
                         </iframe>
                         <a href="https://www.google.com/maps/dir//500+Olive+St,+Marysville,+CA+95901" target="_blank" rel="noopener noreferrer" class="map-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                             Get Directions
                         </a>
                     </div>
@@ -726,8 +1032,9 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-en="&copy; 2024 Law Office of Tony Carlos. All rights reserved." data-es="&copy; 2024 Oficina Legal de Tony Carlos. Todos los derechos reservados.">&copy; 2024 Law Office of Tony Carlos. All rights reserved.</p>
-                <p class="disclaimer" data-en="This website is for informational purposes only and does not constitute legal advice. Contacting us does not create an attorney-client relationship." data-es="Este sitio web es solo para fines informativos y no constituye asesoramiento legal. Contactarnos no crea una relacion abogado-cliente.">This website is for informational purposes only and does not constitute legal advice. Contacting us does not create an attorney-client relationship.</p>
+                <p data-en="&copy; <span id='copyright-year'>2024</span> Law Office of Tony Carlos. All rights reserved." data-es="&copy; <span id='copyright-year'>2024</span> Oficina Legal de Tony Carlos. Todos los derechos reservados.">&copy; <span id="copyright-year">2024</span> Law Office of Tony Carlos. All rights reserved.</p>
+                <p class="disclaimer" data-en="This website is for informational purposes only and does not constitute legal advice. Contacting us does not create an attorney-client relationship. Past results do not guarantee future outcomes. Every case is unique and must be evaluated on its own merits." data-es="Este sitio web es solo para fines informativos y no constituye asesoramiento legal. Contactarnos no crea una relacion abogado-cliente. Los resultados pasados no garantizan resultados futuros. Cada caso es unico y debe ser evaluado segun sus propios meritos.">This website is for informational purposes only and does not constitute legal advice. Contacting us does not create an attorney-client relationship. Past results do not guarantee future outcomes. Every case is unique and must be evaluated on its own merits.</p>
+                <p class="disclaimer" data-en="Responsible Attorney: Joseph Anthony Carlos, California State Bar #267547" data-es="Abogado Responsable: Joseph Anthony Carlos, Colegio de Abogados de California #267547">Responsible Attorney: Joseph Anthony Carlos, California State Bar #267547</p>
                 <p><a href="privacy-policy.html" data-en="Privacy Policy" data-es="Politica de Privacidad">Privacy Policy</a></p>
             </div>
         </div>
