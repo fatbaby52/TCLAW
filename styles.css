@@ -1073,8 +1073,8 @@ section {
     }
 
     .testimonial-v2:nth-child(even) {
-        background: var(--bg-alt);
-        border-color: var(--border);
+        background: var(--secondary);
+        border-color: rgba(255, 255, 255, 0.1);
     }
 
     .testimonial-v2:nth-child(even) .testimonial-v2__quote-mark {
@@ -1083,7 +1083,7 @@ section {
     }
 
     .testimonial-v2:nth-child(even) .testimonial-v2__text {
-        color: var(--text);
+        color: #fff;
     }
 
     .testimonial-v2:nth-child(even) .testimonial-v2__name {
@@ -1091,7 +1091,7 @@ section {
     }
 
     .testimonial-v2:nth-child(even) .testimonial-v2__footer {
-        border-top-color: var(--border);
+        border-top-color: rgba(255, 255, 255, 0.1);
     }
 }
 
