@@ -1049,6 +1049,10 @@ section {
         grid-row: auto;
     }
 
+    .testimonial-v2--featured .testimonial-v2__text {
+        font-weight: 400;
+    }
+
     /* Mobile alternating colors: odd = purple, even = grey */
     .testimonial-v2:nth-child(odd) {
         background: var(--primary);
