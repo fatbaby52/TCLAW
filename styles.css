@@ -921,7 +921,7 @@ section {
 .testimonials-v2__grid {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: repeat(5, auto);
     gap: clamp(1rem, 2vw, 1.5rem);
 }
 
@@ -939,9 +939,20 @@ section {
     border-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Featured testimonial spans two rows */
+/* Desktop alternating: even items get a lighter background */
+.testimonial-v2:nth-child(even):not(.testimonial-v2--featured) {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.testimonial-v2:nth-child(even):not(.testimonial-v2--featured):hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Featured testimonial spans all rows on left */
 .testimonial-v2--featured {
-    grid-row: 1 / 3;
+    grid-row: 1 / 6;
     background: var(--primary);
     border-color: var(--primary);
     display: flex;
@@ -954,7 +965,8 @@ section {
 }
 
 .testimonial-v2--featured .testimonial-v2__quote-mark {
-    color: rgba(255, 255, 255, 0.2);
+    color: var(--accent);
+    opacity: 0.8;
 }
 
 .testimonial-v2--featured .testimonial-v2__text {
@@ -963,7 +975,7 @@ section {
 }
 
 .testimonial-v2--featured .testimonial-v2__name {
-    color: #fff;
+    color: var(--accent);
 }
 
 .testimonial-v2--featured .testimonial-v2__outcome {
@@ -976,7 +988,8 @@ section {
     font-family: Georgia, 'Times New Roman', serif;
     font-size: clamp(4rem, 8vw, 6rem);
     line-height: 0.8;
-    color: rgba(255, 255, 255, 0.1);
+    color: var(--accent);
+    opacity: 0.6;
     margin-bottom: 0.5rem;
     user-select: none;
 }
@@ -986,8 +999,9 @@ section {
     margin: 0;
     font-size: clamp(1rem, 1.5vw, 1.125rem);
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.95);
     font-style: normal;
+    font-weight: 600;
     flex-grow: 1;
 }
 
@@ -1007,10 +1021,11 @@ section {
 }
 
 .testimonial-v2__name {
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--accent);
     letter-spacing: 0.02em;
+    text-transform: uppercase;
 }
 
 .testimonial-v2__outcome {
@@ -1034,52 +1049,49 @@ section {
         grid-row: auto;
     }
 
-    /* Mobile alternating colors: purple, grey, purple */
-    .testimonial-v2:nth-child(1) {
+    /* Mobile alternating colors: odd = purple, even = grey */
+    .testimonial-v2:nth-child(odd) {
         background: var(--primary);
         border-color: var(--primary);
     }
 
-    .testimonial-v2:nth-child(2) {
+    .testimonial-v2:nth-child(odd) .testimonial-v2__quote-mark {
+        color: var(--accent);
+        opacity: 0.8;
+    }
+
+    .testimonial-v2:nth-child(odd) .testimonial-v2__text {
+        color: #fff;
+    }
+
+    .testimonial-v2:nth-child(odd) .testimonial-v2__name {
+        color: var(--accent);
+    }
+
+    .testimonial-v2:nth-child(odd) .testimonial-v2__footer {
+        border-top-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .testimonial-v2:nth-child(even) {
         background: var(--bg-alt);
         border-color: var(--border);
     }
 
-    .testimonial-v2:nth-child(2) .testimonial-v2__quote-mark {
-        color: rgba(73, 80, 188, 0.2);
+    .testimonial-v2:nth-child(even) .testimonial-v2__quote-mark {
+        color: var(--accent);
+        opacity: 0.7;
     }
 
-    .testimonial-v2:nth-child(2) .testimonial-v2__text {
+    .testimonial-v2:nth-child(even) .testimonial-v2__text {
         color: var(--text);
     }
 
-    .testimonial-v2:nth-child(2) .testimonial-v2__name {
-        color: var(--text);
+    .testimonial-v2:nth-child(even) .testimonial-v2__name {
+        color: var(--accent);
     }
 
-    .testimonial-v2:nth-child(2) .testimonial-v2__footer {
+    .testimonial-v2:nth-child(even) .testimonial-v2__footer {
         border-top-color: var(--border);
-    }
-
-    .testimonial-v2:nth-child(3) {
-        background: var(--primary);
-        border-color: var(--primary);
-    }
-
-    .testimonial-v2:nth-child(3) .testimonial-v2__quote-mark {
-        color: rgba(255, 255, 255, 0.2);
-    }
-
-    .testimonial-v2:nth-child(3) .testimonial-v2__text {
-        color: #fff;
-    }
-
-    .testimonial-v2:nth-child(3) .testimonial-v2__name {
-        color: #fff;
-    }
-
-    .testimonial-v2:nth-child(3) .testimonial-v2__footer {
-        border-top-color: rgba(255, 255, 255, 0.1);
     }
 }
 
