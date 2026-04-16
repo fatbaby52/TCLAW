@@ -1050,6 +1050,7 @@ section {
     }
 
     .testimonial-v2--featured .testimonial-v2__text {
+        font-size: clamp(1rem, 1.5vw, 1.125rem);
         font-weight: 400;
     }
 
