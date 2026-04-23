@@ -1013,7 +1013,6 @@ section {
 
 .testimonial-v2--featured .testimonial-v2__text {
     color: #fff;
-    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
 }
 
 .testimonial-v2--featured .testimonial-v2__name {
@@ -1100,11 +1099,6 @@ section {
     .testimonial-v2:nth-child(7) {
         grid-column: auto;
         grid-row: auto;
-    }
-
-    .testimonial-v2--featured .testimonial-v2__text {
-        font-size: clamp(1rem, 1.5vw, 1.125rem);
-        font-weight: 400;
     }
 
     /* Mobile alternating colors: odd = purple, even = grey */
