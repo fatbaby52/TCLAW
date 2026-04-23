@@ -921,7 +921,7 @@ section {
 .testimonials-v2__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
     gap: clamp(1rem, 2vw, 1.5rem);
 }
 
@@ -989,6 +989,16 @@ section {
 .testimonial-v2:nth-child(5) {
     grid-column: 1;
     grid-row: 4;
+}
+
+.testimonial-v2:nth-child(6) {
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.testimonial-v2:nth-child(7) {
+    grid-column: 2;
+    grid-row: 5;
 }
 
 .testimonial-v2--featured:hover {
@@ -1085,7 +1095,9 @@ section {
     .testimonial-v2:nth-child(2),
     .testimonial-v2:nth-child(3),
     .testimonial-v2:nth-child(4),
-    .testimonial-v2:nth-child(5) {
+    .testimonial-v2:nth-child(5),
+    .testimonial-v2:nth-child(6),
+    .testimonial-v2:nth-child(7) {
         grid-column: auto;
         grid-row: auto;
     }
