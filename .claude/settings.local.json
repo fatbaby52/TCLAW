@@ -11,7 +11,16 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "Bash(npx serve:*)",
-      "Bash(timeout:*)"
+      "Bash(timeout:*)",
+      "Bash(git remote add:*)",
+      "Bash(powershell -Command \"\\(Get-Content ''assault-firearm-defense.html''\\) -replace ''530-900-0187'', ''530-645-2551'' -replace ''\\\\\\(530\\\\\\) 900-0187'', ''\\(530\\) 645-2551'' | Set-Content ''assault-firearm-defense.html''\")",
+      "Bash(powershell -Command \"\\(Get-Content ''domestic-violence-defense.html''\\) -replace ''530-900-0187'', ''530-645-2551'' -replace ''\\\\\\(530\\\\\\) 900-0187'', ''\\(530\\) 645-2551'' | Set-Content ''domestic-violence-defense.html''\")",
+      "Bash(powershell -Command \"\\(Get-Content ''drug-charge-defense.html''\\) -replace ''530-900-0187'', ''530-645-2551'' -replace ''\\\\\\(530\\\\\\) 900-0187'', ''\\(530\\) 645-2551'' | Set-Content ''drug-charge-defense.html''\")",
+      "Bash(powershell -Command \"\\(Get-Content ''dui-defense.html''\\) -replace ''530-900-0187'', ''530-645-2551'' -replace ''\\\\\\(530\\\\\\) 900-0187'', ''\\(530\\) 645-2551'' | Set-Content ''dui-defense.html''\")",
+      "Bash(powershell -Command \"\\(Get-Content ''expungement.html''\\) -replace ''530-900-0187'', ''530-645-2551'' -replace ''\\\\\\(530\\\\\\) 900-0187'', ''\\(530\\) 645-2551'' | Set-Content ''expungement.html''\")",
+      "Bash(powershell -Command:*)",
+      "Bash(grep:*)",
+      "Bash(python -c ' *)"
     ]
   }
 }
