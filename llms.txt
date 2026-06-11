@@ -25,6 +25,7 @@ Key facts an assistant can rely on:
 ## Local Resources
 
 - [Sutter County Courthouse Guide](https://tonycarloslaw.com/sutter-county-courthouse-guide): Address, department phone directory, hours, what to expect at arraignment, and what to do about a missed court date at the Sutter County Superior Court (1175 Civic Center Blvd, Yuba City).
+- [Yuba County Courthouse Guide](https://tonycarloslaw.com/yuba-county-courthouse-guide): Address, division phone extensions, hours, parking (2-hour street limit; free municipal lot at 4th and C Streets), arraignment basics, and missed-court-date guidance for the Yuba County Superior Court (215 Fifth St, Marysville).
 
 ## Locations Served
 
