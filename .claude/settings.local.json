@@ -24,7 +24,8 @@
       "Bash(xxd)",
       "Bash(python -c \"data=open\\('index.html','rb'\\).read\\(2000\\); print\\('CRLF' if b'\\\\r\\\\n' in data else 'LF'\\)\")",
       "Bash(python -)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(git checkout *)"
     ]
   }
 }
