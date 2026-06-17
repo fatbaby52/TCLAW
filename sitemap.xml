@@ -4,9 +4,17 @@
   <!-- Homepage -->
   <url>
     <loc>https://tonycarloslaw.com/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- Attorney Bio -->
+  <url>
+    <loc>https://tonycarloslaw.com/attorney/tony-carlos</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <!-- Practice Area Hub Pages -->
@@ -20,7 +28,7 @@
     <loc>https://tonycarloslaw.com/practice-areas/immigration</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://tonycarloslaw.com/practice-areas/dui</loc>
@@ -42,12 +50,6 @@
   </url>
 
   <!-- Criminal Defense Sub-Pages -->
-  <url>
-    <loc>https://tonycarloslaw.com/dui-defense</loc>
-    <lastmod>2026-06-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <url>
     <loc>https://tonycarloslaw.com/assault-firearm-defense</loc>
     <lastmod>2026-06-11</lastmod>
@@ -121,6 +123,24 @@
   <url>
     <loc>https://tonycarloslaw.com/locations/wheatland</loc>
     <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tonycarloslaw.com/locations/linda</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tonycarloslaw.com/locations/plumas-lake</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tonycarloslaw.com/locations/gridley</loc>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

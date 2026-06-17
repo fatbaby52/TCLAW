@@ -1,0 +1,10 @@
+# Netlify redirects. Format: from  to  status
+# (force "!" so these win even though the old .html files still exist)
+
+# Duplicate DUI page consolidated into /practice-areas/dui
+/dui-defense           /practice-areas/dui   301!
+/dui-defense.html      /practice-areas/dui   301!
+
+# Employment law discontinued — send to homepage (was previously pointing to immigration)
+/practice-areas/employment-law        /   301!
+/practice-areas/employment-law.html   /   301!

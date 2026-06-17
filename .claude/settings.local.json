@@ -20,7 +20,11 @@
       "Bash(powershell -Command \"\\(Get-Content ''expungement.html''\\) -replace ''530-900-0187'', ''530-645-2551'' -replace ''\\\\\\(530\\\\\\) 900-0187'', ''\\(530\\) 645-2551'' | Set-Content ''expungement.html''\")",
       "Bash(powershell -Command:*)",
       "Bash(grep:*)",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "Bash(xxd)",
+      "Bash(python -c \"data=open\\('index.html','rb'\\).read\\(2000\\); print\\('CRLF' if b'\\\\r\\\\n' in data else 'LF'\\)\")",
+      "Bash(python -)",
+      "WebSearch"
     ]
   }
 }
