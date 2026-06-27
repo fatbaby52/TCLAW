@@ -1,0 +1,6 @@
+# Netlify build configuration.
+
+# Auto-ping IndexNow (Bing, Yandex, etc.) after each production deploy so
+# changed pages get re-crawled fast. See plugins/netlify-plugin-indexnow/.
+[[plugins]]
+  package = "/plugins/netlify-plugin-indexnow"

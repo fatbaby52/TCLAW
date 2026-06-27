@@ -1,0 +1,7 @@
+{
+  "name": "netlify-plugin-indexnow",
+  "version": "1.0.0",
+  "description": "Ping IndexNow with changed pages after a production deploy.",
+  "main": "index.js",
+  "private": true
+}
