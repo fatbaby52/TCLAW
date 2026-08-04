@@ -48,6 +48,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://tonycarloslaw.com/practice-areas/criminal-immigration-consequences</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tonycarloslaw.com/deportacion</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- Criminal Defense Sub-Pages -->
   <url>
@@ -91,6 +103,12 @@
   <url>
     <loc>https://tonycarloslaw.com/yuba-county-courthouse-guide</loc>
     <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tonycarloslaw.com/guides/what-happens-after-arrest-sutter-county</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -145,12 +163,6 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Utility Pages -->
-  <url>
-    <loc>https://tonycarloslaw.com/privacy-policy</loc>
-    <lastmod>2026-06-11</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+  <!-- privacy-policy intentionally omitted: page is noindex -->
 
 </urlset>

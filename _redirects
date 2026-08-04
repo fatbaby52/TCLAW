@@ -8,3 +8,7 @@
 # Employment law discontinued — send to homepage (was previously pointing to immigration)
 /practice-areas/employment-law        /   301!
 /practice-areas/employment-law.html   /   301!
+
+# Personal injury discontinued — consolidated into immigration (matches the old stub's client-side redirect)
+/practice-areas/personal-injury        /practice-areas/immigration   301!
+/practice-areas/personal-injury.html   /practice-areas/immigration   301!
