@@ -921,7 +921,7 @@ section {
 .testimonials-v2__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(6, auto);
     gap: clamp(1rem, 2vw, 1.5rem);
 }
 
@@ -999,6 +999,17 @@ section {
 .testimonial-v2:nth-child(7) {
     grid-column: 2;
     grid-row: 5;
+}
+
+/* row 6 - added with the S. Yang and Sam C. testimonials */
+.testimonial-v2:nth-child(8) {
+    grid-column: 1;
+    grid-row: 6;
+}
+
+.testimonial-v2:nth-child(9) {
+    grid-column: 2;
+    grid-row: 6;
 }
 
 .testimonial-v2--featured:hover {
@@ -1096,7 +1107,9 @@ section {
     .testimonial-v2:nth-child(4),
     .testimonial-v2:nth-child(5),
     .testimonial-v2:nth-child(6),
-    .testimonial-v2:nth-child(7) {
+    .testimonial-v2:nth-child(7),
+    .testimonial-v2:nth-child(8),
+    .testimonial-v2:nth-child(9) {
         grid-column: auto;
         grid-row: auto;
     }
