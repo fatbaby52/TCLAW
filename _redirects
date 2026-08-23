@@ -12,3 +12,8 @@
 # Personal injury discontinued — consolidated into immigration (matches the old stub's client-side redirect)
 /practice-areas/personal-injury        /practice-areas/immigration   301!
 /practice-areas/personal-injury.html   /practice-areas/immigration   301!
+
+# Search Console ownership verification. Forced 200 so the exact .html path
+# is served as-is and is not rewritten to an extensionless URL, which would
+# break Google's check.
+/google56619ba9581d555d.html   /google56619ba9581d555d.html   200!
