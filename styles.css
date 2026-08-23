@@ -1186,6 +1186,16 @@ section {
     margin-top: 2rem;
 }
 
+/* Additional-counties column: 16 entries read better in two columns */
+.area-group--counties ul {
+    columns: 2;
+    column-gap: 1.5rem;
+}
+
+.area-group--counties ul li {
+    break-inside: avoid;
+}
+
 .area-group {
     background: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius);
