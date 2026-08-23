@@ -2,18 +2,18 @@
 
 /* CSS Variables */
 :root {
-    /* v2 palette — ink / cream / brass */
-    --primary: #b08840;           /* brass — was indigo #4950bc */
+    /* v2 palette - ink / cream / brass */
+    --primary: #b08840;           /* brass; previously indigo */
     --primary-hover: #96702f;
     --primary-light: #c9a05a;
-    --secondary: #15171c;         /* ink — was var(--secondary) */
-    --accent: #b08840;            /* single accent, was gold #e8b923 */
+    --secondary: #15171c;         /* ink */
+    --accent: #b08840;            /* one accent, not two */
     --text: #15171c;
     --text-light: #4a4f57;
     --text-muted: #6b7079;
-    --bg: #f1ece2;                /* cream — was var(--on-dark) */
-    --bg-alt: #e8e1d4;            /* deeper cream — was #f2f2f2 */
-    --bg-dark: #15171c;           /* ink — was var(--secondary) */
+    --bg: #f1ece2;                /* cream page ground */
+    --bg-alt: #e8e1d4;            /* deeper cream for alternating bands */
+    --bg-dark: #15171c;           /* ink */
     --border: #d7d0c2;
     --border-card: #cbc3b3;
     --success: #4a7a4e;
@@ -21,18 +21,18 @@
     --yelp-red-hover: #E00000;
     --shadow: 0 0.125em 0.25em -0.0625em rgba(21, 23, 28, 0.07);
     --shadow-lg: 0 0.25em 0.75em -0.125em rgba(21, 23, 28, 0.10);
-    --radius: 0;                  /* hard edges — was 0.6em */
-    --radius-sm: 0;               /* was 0.35em */
+    --radius: 0;                  /* hard edges */
+    --radius-sm: 0;
     --transition: all 0.3s ease;
 
     --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
     --sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --mono: 'JetBrains Mono', 'Courier New', monospace;
 
-    /* pure var(--on-dark) reads cold against cream, so panels and
-       text-on-dark both get warmed */
-    --panel: #f8f6f1;             /* was plain var(--on-dark) */
-    --on-dark: #f5f1ea;           /* was plain var(--on-dark) */
+    /* pure #ffffff reads cold against cream, so panel fills and
+       text-on-dark are both warmed */
+    --panel: #f8f6f1;
+    --on-dark: #f5f1ea;
 }
 
 /* Reset & Base */
@@ -306,7 +306,7 @@ ul {
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(135deg, rgba(21, 23, 28, 0.93) 0%, rgba(58, 56, 56, 0.88) 100%);
+    background: linear-gradient(135deg, rgba(21, 23, 28, 0.93) 0%, rgba(32, 35, 42, 0.90) 100%);
 }
 
 .hero .container {
@@ -321,7 +321,7 @@ ul {
 .hero-label {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(245, 241, 234, 0.1);
     border-radius: var(--radius-sm);
     font-size: 0.875rem;
     font-weight: 600;
@@ -343,7 +343,7 @@ ul {
 
 .hero-text {
     font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(245, 241, 234, 0.9);
     margin-bottom: 2rem;
     max-width: 650px;
 }
@@ -357,7 +357,7 @@ ul {
 
 .hero-note {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(245, 241, 234, 0.7);
 }
 
 .hero-highlights {
@@ -370,7 +370,7 @@ ul {
     align-items: center;
     gap: 0.75rem;
     padding: 0.5rem 0;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(245, 241, 234, 0.9);
 }
 
 .hero-highlights svg {
@@ -942,27 +942,27 @@ section {
 
 /* Individual testimonial cards */
 .testimonial-v2 {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(245, 241, 234, 0.03);
+    border: 1px solid rgba(245, 241, 234, 0.08);
     padding: clamp(1.5rem, 3vw, 2.5rem);
     position: relative;
     transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .testimonial-v2:hover {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(245, 241, 234, 0.06);
+    border-color: rgba(245, 241, 234, 0.15);
 }
 
 /* Desktop alternating: even items get a lighter background */
 .testimonial-v2:nth-child(even):not(.testimonial-v2--featured) {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.12);
+    background: rgba(245, 241, 234, 0.08);
+    border-color: rgba(245, 241, 234, 0.12);
 }
 
 .testimonial-v2:nth-child(even):not(.testimonial-v2--featured):hover {
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(255, 255, 255, 0.18);
+    background: rgba(245, 241, 234, 0.12);
+    border-color: rgba(245, 241, 234, 0.18);
 }
 
 /* Featured testimonial styling (purple) */
@@ -1035,7 +1035,7 @@ section {
 }
 
 .testimonial-v2--featured .testimonial-v2__outcome {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(245, 241, 234, 0.2);
     color: var(--on-dark);
 }
 
@@ -1055,7 +1055,7 @@ section {
     margin: 0;
     font-size: clamp(1rem, 1.5vw, 1.125rem);
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.95);
+    color: rgba(245, 241, 234, 0.95);
     font-style: normal;
     font-weight: 600;
     flex-grow: 1;
@@ -1065,7 +1065,7 @@ section {
 .testimonial-v2__footer {
     margin-top: clamp(1.5rem, 3vw, 2rem);
     padding-top: clamp(1rem, 2vw, 1.5rem);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(245, 241, 234, 0.1);
 }
 
 .testimonial-v2__author {
@@ -1090,7 +1090,7 @@ section {
     text-transform: uppercase;
     letter-spacing: 0.08em;
     padding: 0.4em 0.8em;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(245, 241, 234, 0.1);
     color: var(--accent);
 }
 
@@ -1136,12 +1136,12 @@ section {
     }
 
     .testimonial-v2:nth-child(odd) .testimonial-v2__footer {
-        border-top-color: rgba(255, 255, 255, 0.1);
+        border-top-color: rgba(245, 241, 234, 0.1);
     }
 
     .testimonial-v2:nth-child(even) {
         background: var(--secondary);
-        border-color: rgba(255, 255, 255, 0.1);
+        border-color: rgba(245, 241, 234, 0.1);
     }
 
     .testimonial-v2:nth-child(even) .testimonial-v2__quote-mark {
@@ -1158,7 +1158,7 @@ section {
     }
 
     .testimonial-v2:nth-child(even) .testimonial-v2__footer {
-        border-top-color: rgba(255, 255, 255, 0.1);
+        border-top-color: rgba(245, 241, 234, 0.1);
     }
 }
 
@@ -1189,7 +1189,7 @@ section {
 }
 
 .areas-content > p {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(245, 241, 234, 0.8);
     max-width: 700px;
     margin: 0 auto 2rem;
 }
@@ -1202,7 +1202,7 @@ section {
 }
 
 .area-group {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(245, 241, 234, 0.05);
     border-radius: var(--radius);
     padding: 2rem;
 }
@@ -1219,8 +1219,8 @@ section {
 
 .area-group ul li {
     padding: 0.5rem 0;
-    color: rgba(255, 255, 255, 0.8);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(245, 241, 234, 0.8);
+    border-bottom: 1px solid rgba(245, 241, 234, 0.1);
 }
 
 .area-group ul li:last-child {
@@ -1327,7 +1327,7 @@ section {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(73, 80, 188, 0.15);
+    box-shadow: 0 0 0 3px rgba(176, 136, 64, 0.20);
 }
 
 .form-group textarea {
@@ -1354,7 +1354,7 @@ section {
 .form-group select[aria-invalid="true"],
 .form-group textarea[aria-invalid="true"] {
     border-color: #b0442f;
-    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+    box-shadow: 0 0 0 3px rgba(176, 68, 47, 0.15);
 }
 
 /* Contact Map */
@@ -1406,7 +1406,7 @@ section {
 }
 
 .footer-brand p {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(245, 241, 234, 0.7);
     margin-top: 1rem;
     font-size: 0.95rem;
 }
@@ -1437,7 +1437,7 @@ section {
 }
 
 .footer-links a {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(245, 241, 234, 0.7);
     font-size: 0.95rem;
 }
 
@@ -1446,7 +1446,7 @@ section {
 }
 
 .footer-contact p {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(245, 241, 234, 0.7);
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
 }
@@ -1461,12 +1461,12 @@ section {
 
 .footer-bottom {
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(245, 241, 234, 0.1);
     text-align: center;
 }
 
 .footer-bottom p {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(245, 241, 234, 0.5);
     font-size: 0.875rem;
     margin-bottom: 0.5rem;
 }
@@ -1484,13 +1484,13 @@ section {
 /* Page Hero */
 .page-hero {
     padding: 8rem 0 3rem;
-    background: linear-gradient(135deg, rgba(21, 23, 28, 0.93) 0%, rgba(58, 56, 56, 0.88) 100%),
+    background: linear-gradient(135deg, rgba(21, 23, 28, 0.93) 0%, rgba(32, 35, 42, 0.90) 100%),
                 url('../hero-bg.webp') center/cover no-repeat;
     color: var(--on-dark);
 }
 
 .no-webp .page-hero {
-    background: linear-gradient(135deg, rgba(21, 23, 28, 0.93) 0%, rgba(58, 56, 56, 0.88) 100%),
+    background: linear-gradient(135deg, rgba(21, 23, 28, 0.93) 0%, rgba(32, 35, 42, 0.90) 100%),
                 url('../hero-bg-optimized.jpg') center/cover no-repeat;
 }
 
@@ -1502,7 +1502,7 @@ section {
 
 .hero-subtitle {
     font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(245, 241, 234, 0.8);
 }
 
 /* Breadcrumb */
@@ -1515,7 +1515,7 @@ section {
 }
 
 .breadcrumb a {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(245, 241, 234, 0.7);
 }
 
 .breadcrumb a:hover {
@@ -1523,7 +1523,7 @@ section {
 }
 
 .breadcrumb span {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(245, 241, 234, 0.5);
 }
 
 /* Content Grid */
@@ -1669,7 +1669,7 @@ section {
 }
 
 .highlight-box p {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(245, 241, 234, 0.9);
     margin: 0;
 }
 
@@ -1744,7 +1744,7 @@ section {
 }
 
 .sidebar-cta p {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(245, 241, 234, 0.8);
     margin-bottom: 1.5rem;
 }
 
@@ -1754,7 +1754,7 @@ section {
 
 .cta-note {
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(245, 241, 234, 0.7);
     margin: 0;
 }
 
@@ -1855,7 +1855,7 @@ section {
 }
 
 .location-cta p {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(245, 241, 234, 0.9);
     max-width: 600px;
     margin: 0 auto 2rem;
     font-size: 1.1rem;
@@ -1903,7 +1903,7 @@ section {
 
 .urgent-text p {
     margin: 0;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(245, 241, 234, 0.9);
 }
 
 /* Penalty Table */
@@ -2199,4 +2199,53 @@ section {
         align-self: center;
         margin-top: 0.5rem;
     }
+}
+
+
+/* ============================================================
+   v2 palette fixes
+   The previous palette had two accents - indigo --primary and gold
+   --accent - so accent-coloured text on a primary fill was legible.
+   v2 uses one brass for both, which would render those combinations
+   invisible. These rules re-point them to ink.
+   ============================================================ */
+
+.testimonial-v2--featured .testimonial-v2__quote-mark,
+.testimonial-v2--featured .testimonial-v2__name {
+    color: var(--secondary);
+    opacity: 1;
+}
+
+.testimonial-v2--featured .testimonial-v2__text {
+    color: rgba(21, 23, 28, 0.92);
+}
+
+.testimonial-v2--featured .testimonial-v2__outcome {
+    background: rgba(21, 23, 28, 0.14);
+    color: var(--secondary);
+}
+
+.testimonial-v2--featured .testimonial-v2__footer {
+    border-top-color: rgba(21, 23, 28, 0.18);
+}
+
+@media (max-width: 900px) {
+    .testimonial-v2:nth-child(odd) .testimonial-v2__quote-mark,
+    .testimonial-v2:nth-child(odd) .testimonial-v2__name {
+        color: var(--secondary);
+        opacity: 1;
+    }
+
+    .testimonial-v2:nth-child(odd) .testimonial-v2__text {
+        color: rgba(21, 23, 28, 0.92);
+    }
+
+    .testimonial-v2:nth-child(odd) .testimonial-v2__footer {
+        border-top-color: rgba(21, 23, 28, 0.18);
+    }
+}
+
+/* The footer logo was inverted to pure white; warm it to match. */
+.footer-logo-img {
+    filter: brightness(0) invert(1) sepia(0.16) saturate(0.5) hue-rotate(5deg);
 }
