@@ -1,26 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
 /* CSS Variables */
 :root {
-    --primary: #4950bc;
-    --primary-hover: #2f36a2;
-    --primary-light: #6269d5;
-    --secondary: #272525;
-    --accent: #e8b923;
-    --text: #272525;
-    --text-light: #555;
-    --text-muted: #777;
-    --bg: #ffffff;
-    --bg-alt: #f2f2f2;
-    --bg-dark: #272525;
-    --border: #E5E0DF;
-    --border-card: #c0c1d7;
-    --success: #4ade80;
+    /* v2 palette — ink / cream / brass */
+    --primary: #b08840;           /* brass — was indigo #4950bc */
+    --primary-hover: #96702f;
+    --primary-light: #c9a05a;
+    --secondary: #15171c;         /* ink — was var(--secondary) */
+    --accent: #b08840;            /* single accent, was gold #e8b923 */
+    --text: #15171c;
+    --text-light: #4a4f57;
+    --text-muted: #6b7079;
+    --bg: #f1ece2;                /* cream — was var(--on-dark) */
+    --bg-alt: #e8e1d4;            /* deeper cream — was #f2f2f2 */
+    --bg-dark: #15171c;           /* ink — was var(--secondary) */
+    --border: #d7d0c2;
+    --border-card: #cbc3b3;
+    --success: #4a7a4e;
     --yelp-red: #FF1A1A;
     --yelp-red-hover: #E00000;
-    --shadow: 0 0.125em 0.25em -0.0625em rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 0.25em 0.75em -0.125em rgba(0, 0, 0, 0.08);
-    --radius: 0.6em;
-    --radius-sm: 0.35em;
+    --shadow: 0 0.125em 0.25em -0.0625em rgba(21, 23, 28, 0.07);
+    --shadow-lg: 0 0.25em 0.75em -0.125em rgba(21, 23, 28, 0.10);
+    --radius: 0;                  /* hard edges — was 0.6em */
+    --radius-sm: 0;               /* was 0.35em */
     --transition: all 0.3s ease;
+
+    --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+
+    /* pure var(--on-dark) reads cold against cream, so panels and
+       text-on-dark both get warmed */
+    --panel: #f8f6f1;             /* was plain var(--on-dark) */
+    --on-dark: #f5f1ea;           /* was plain var(--on-dark) */
 }
 
 /* Reset & Base */
@@ -41,7 +53,7 @@ html {
     left: 50%;
     transform: translateX(-50%);
     background: var(--primary);
-    color: white;
+    color: var(--on-dark);
     padding: 0.75rem 1.5rem;
     border-radius: var(--radius);
     font-weight: 600;
@@ -84,7 +96,7 @@ textarea:focus-visible {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: var(--sans);
     font-size: 16px;
     line-height: 1.6;
     letter-spacing: -0.02em;
@@ -93,12 +105,15 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-weight: 700;
-    line-height: 1.25;
-    letter-spacing: -0.03em;
+    font-family: var(--serif);
+    font-weight: 500;
+    line-height: 1.06;
+    letter-spacing: -0.015em;
     color: var(--secondary);
 }
+
+/* the serif carries less weight than Inter did at small sizes */
+h4, h5, h6 { font-weight: 600; }
 
 a {
     color: var(--primary);
@@ -134,7 +149,7 @@ ul {
     justify-content: center;
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--sans);
     font-size: 0.95rem;
     font-weight: 600;
     text-decoration: none;
@@ -146,14 +161,14 @@ ul {
 
 .btn-primary {
     background: var(--primary);
-    color: white;
+    color: var(--on-dark);
     border-color: var(--primary);
 }
 
 .btn-primary:hover {
     background: var(--primary-light);
     border-color: var(--primary-light);
-    color: white;
+    color: var(--on-dark);
 }
 
 .btn-secondary {
@@ -164,18 +179,18 @@ ul {
 
 .btn-secondary:hover {
     background: var(--primary);
-    color: white;
+    color: var(--on-dark);
     border-color: var(--primary);
 }
 
 .btn-outline {
     background: transparent;
-    color: white;
-    border-color: white;
+    color: var(--on-dark);
+    border-color: var(--on-dark);
 }
 
 .btn-outline:hover {
-    background: white;
+    background: var(--panel);
     color: var(--primary);
 }
 
@@ -195,7 +210,7 @@ ul {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: white;
+    background: var(--panel);
     box-shadow: var(--shadow);
 }
 
@@ -213,7 +228,7 @@ ul {
 }
 
 .logo-text {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--sans);
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--secondary);
@@ -270,7 +285,7 @@ ul {
 /* Hero Section */
 .hero {
     padding: 10rem 0 6rem;
-    color: white;
+    color: var(--on-dark);
     position: relative;
     overflow: hidden;
 }
@@ -291,7 +306,7 @@ ul {
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(135deg, rgba(39, 37, 37, 0.92) 0%, rgba(58, 56, 56, 0.88) 100%);
+    background: linear-gradient(135deg, rgba(21, 23, 28, 0.93) 0%, rgba(58, 56, 56, 0.88) 100%);
 }
 
 .hero .container {
@@ -317,7 +332,7 @@ ul {
 
 .hero h1 {
     font-size: 3.5rem;
-    color: white;
+    color: var(--on-dark);
     margin-bottom: 1.5rem;
     letter-spacing: -0.03em;
 }
@@ -444,14 +459,14 @@ ul {
 }
 
 .trust-item {
-    color: white;
+    color: var(--on-dark);
 }
 
 .trust-number {
     display: block;
     font-size: 2.5rem;
     font-weight: 700;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--sans);
     letter-spacing: -0.03em;
 }
 
@@ -491,7 +506,7 @@ ul {
     flex-direction: column;
     text-align: left;
     margin-top: 1.5rem;
-    background: white;
+    background: var(--panel);
     padding: 1.5rem 2rem;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
@@ -615,7 +630,7 @@ section {
 }
 
 .practice-card {
-    background: white;
+    background: var(--panel);
     border-radius: var(--radius);
     padding: 2.5rem;
     box-shadow: var(--shadow);
@@ -686,7 +701,7 @@ section {
 }
 
 .feature-card {
-    background: white;
+    background: var(--panel);
     border-radius: var(--radius);
     padding: 2rem;
     text-align: center;
@@ -703,7 +718,7 @@ section {
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
-    color: white;
+    color: var(--on-dark);
 }
 
 .feature-card h3 {
@@ -755,7 +770,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white;
+    background: var(--panel);
     border-radius: var(--radius-sm);
     margin-bottom: 1.5rem;
     overflow: hidden;
@@ -792,14 +807,14 @@ section {
 
 /* Yelp Card Specific Styles */
 .yelp-card {
-    background: white;
+    background: var(--panel);
     border: 1px solid var(--yelp-red);
 }
 
 .yelp-header {
     text-align: center;
     padding-bottom: 1rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border);
     margin-bottom: 1rem;
 }
 
@@ -871,7 +886,7 @@ section {
     justify-content: center;
     gap: 0.5rem;
     background: var(--yelp-red);
-    color: white;
+    color: var(--on-dark);
     padding: 0.875rem 1.5rem;
     border-radius: var(--radius);
     font-weight: 600;
@@ -881,7 +896,7 @@ section {
 
 .yelp-button:hover {
     background: var(--yelp-red-hover);
-    color: white;
+    color: var(--on-dark);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(255, 26, 26, 0.3);
 }
@@ -913,7 +928,7 @@ section {
 }
 
 .testimonials-v2__header h2 {
-    color: #fff;
+    color: var(--on-dark);
     font-size: clamp(1.75rem, 4vw, 2.5rem);
     max-width: 500px;
 }
@@ -1012,7 +1027,7 @@ section {
 }
 
 .testimonial-v2--featured .testimonial-v2__text {
-    color: #fff;
+    color: var(--on-dark);
 }
 
 .testimonial-v2--featured .testimonial-v2__name {
@@ -1021,12 +1036,12 @@ section {
 
 .testimonial-v2--featured .testimonial-v2__outcome {
     background: rgba(255, 255, 255, 0.2);
-    color: #fff;
+    color: var(--on-dark);
 }
 
 /* Quote mark */
 .testimonial-v2__quote-mark {
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: var(--serif);
     font-size: clamp(4rem, 8vw, 6rem);
     line-height: 0.8;
     color: var(--accent);
@@ -1113,7 +1128,7 @@ section {
     }
 
     .testimonial-v2:nth-child(odd) .testimonial-v2__text {
-        color: #fff;
+        color: var(--on-dark);
     }
 
     .testimonial-v2:nth-child(odd) .testimonial-v2__name {
@@ -1135,7 +1150,7 @@ section {
     }
 
     .testimonial-v2:nth-child(even) .testimonial-v2__text {
-        color: #fff;
+        color: var(--on-dark);
     }
 
     .testimonial-v2:nth-child(even) .testimonial-v2__name {
@@ -1158,11 +1173,11 @@ section {
 /* Service Areas */
 .service-areas {
     background: var(--secondary);
-    color: white;
+    color: var(--on-dark);
 }
 
 .service-areas h2 {
-    color: white;
+    color: var(--on-dark);
 }
 
 .service-areas .section-label {
@@ -1194,7 +1209,7 @@ section {
 
 .area-group h3 {
     color: var(--accent);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--sans);
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -1272,7 +1287,7 @@ section {
 
 /* Contact Form */
 .contact-form-wrapper {
-    background: white;
+    background: var(--panel);
     border-radius: var(--radius);
     padding: 2.5rem;
     box-shadow: var(--shadow-lg);
@@ -1302,7 +1317,7 @@ section {
     padding: 0.875rem 1rem;
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--sans);
     font-size: 1rem;
     transition: var(--transition);
 }
@@ -1329,7 +1344,7 @@ section {
 /* Inline form error messages */
 .form-error {
     display: block;
-    color: #dc2626;
+    color: #b0442f;
     font-size: 0.85rem;
     margin-top: 0.35rem;
     font-weight: 500;
@@ -1338,7 +1353,7 @@ section {
 .form-group input[aria-invalid="true"],
 .form-group select[aria-invalid="true"],
 .form-group textarea[aria-invalid="true"] {
-    border-color: #dc2626;
+    border-color: #b0442f;
     box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
 }
 
@@ -1378,8 +1393,8 @@ section {
 
 /* Footer */
 .footer {
-    background: #272525;
-    color: white;
+    background: var(--secondary);
+    color: var(--on-dark);
     padding: 4rem 0 2rem;
 }
 
@@ -1397,7 +1412,7 @@ section {
 }
 
 .footer-brand .logo-text {
-    color: white;
+    color: var(--on-dark);
 }
 
 .footer-logo-img {
@@ -1410,11 +1425,11 @@ section {
 
 .footer-links h4,
 .footer-contact h4 {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--sans);
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 1.25rem;
-    color: white;
+    color: var(--on-dark);
 }
 
 .footer-links ul li {
@@ -1427,7 +1442,7 @@ section {
 }
 
 .footer-links a:hover {
-    color: white;
+    color: var(--on-dark);
 }
 
 .footer-contact p {
@@ -1441,7 +1456,7 @@ section {
 }
 
 .footer-contact a:hover {
-    color: white;
+    color: var(--on-dark);
 }
 
 .footer-bottom {
@@ -1469,18 +1484,18 @@ section {
 /* Page Hero */
 .page-hero {
     padding: 8rem 0 3rem;
-    background: linear-gradient(135deg, rgba(39, 37, 37, 0.92) 0%, rgba(58, 56, 56, 0.88) 100%),
+    background: linear-gradient(135deg, rgba(21, 23, 28, 0.93) 0%, rgba(58, 56, 56, 0.88) 100%),
                 url('../hero-bg.webp') center/cover no-repeat;
-    color: white;
+    color: var(--on-dark);
 }
 
 .no-webp .page-hero {
-    background: linear-gradient(135deg, rgba(39, 37, 37, 0.92) 0%, rgba(58, 56, 56, 0.88) 100%),
+    background: linear-gradient(135deg, rgba(21, 23, 28, 0.93) 0%, rgba(58, 56, 56, 0.88) 100%),
                 url('../hero-bg-optimized.jpg') center/cover no-repeat;
 }
 
 .page-hero h1 {
-    color: white;
+    color: var(--on-dark);
     font-size: 2.75rem;
     margin-bottom: 0.5rem;
 }
@@ -1504,7 +1519,7 @@ section {
 }
 
 .breadcrumb a:hover {
-    color: white;
+    color: var(--on-dark);
 }
 
 .breadcrumb span {
@@ -1644,11 +1659,11 @@ section {
     padding: 2rem;
     border-radius: var(--radius);
     margin: 2rem 0;
-    color: white;
+    color: var(--on-dark);
 }
 
 .highlight-box h4 {
-    color: white;
+    color: var(--on-dark);
     margin-top: 0;
     margin-bottom: 0.75rem;
 }
@@ -1715,8 +1730,8 @@ section {
 }
 
 .sidebar-cta {
-    background: #272525;
-    color: white;
+    background: var(--secondary);
+    color: var(--on-dark);
     padding: 2rem;
     border-radius: var(--radius);
     text-align: center;
@@ -1724,7 +1739,7 @@ section {
 }
 
 .sidebar-cta h3 {
-    color: white;
+    color: var(--on-dark);
     margin-bottom: 1rem;
 }
 
@@ -1830,11 +1845,11 @@ section {
     background: var(--primary);
     padding: 4rem 0;
     text-align: center;
-    color: white;
+    color: var(--on-dark);
 }
 
 .location-cta h2 {
-    color: white;
+    color: var(--on-dark);
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -1854,18 +1869,18 @@ section {
 }
 
 .location-cta .btn-outline {
-    border-color: white;
-    color: white;
+    border-color: var(--on-dark);
+    color: var(--on-dark);
 }
 
 .location-cta .btn-outline:hover {
-    background: white;
+    background: var(--panel);
     color: var(--primary);
 }
 
 /* Urgent CTA */
 .urgent-cta {
-    background: #dc2626;
+    background: #b0442f;
     padding: 1.5rem 0;
 }
 
@@ -1877,11 +1892,11 @@ section {
 }
 
 .urgent-text {
-    color: white;
+    color: var(--on-dark);
 }
 
 .urgent-text h3 {
-    color: white;
+    color: var(--on-dark);
     margin: 0 0 0.25rem 0;
     font-size: 1.25rem;
 }
@@ -2048,7 +2063,7 @@ section {
         top: 100%;
         left: 0;
         right: 0;
-        background: white;
+        background: var(--panel);
         flex-direction: column;
         padding: 1.5rem;
         gap: 1rem;
@@ -2151,7 +2166,7 @@ section {
     padding: 0.4rem 0.75rem;
     cursor: pointer;
     transition: var(--transition);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--sans);
     font-size: 0.85rem;
     font-weight: 600;
 }
