@@ -5,31 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (copyrightYear) {
         copyrightYear.textContent = new Date().getFullYear();
     }
-    // Click-to-load TikTok embed (saves ~12MB of resources until user requests it)
-    const loadTiktokBtn = document.getElementById('load-tiktok-btn');
-    if (loadTiktokBtn) {
-        loadTiktokBtn.addEventListener('click', function() {
-            const placeholder = document.getElementById('tiktok-embed-placeholder');
-            if (placeholder) {
-                placeholder.innerHTML = '<p style="color: var(--text-muted);">Loading TikTok...</p>';
-                placeholder.style.padding = '0';
-
-                // Create the embed
-                setTimeout(() => {
-                    placeholder.innerHTML = `
-                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@tony_carlos_law" data-unique-id="tony_carlos_law" data-embed-type="creator" style="max-width: 780px; min-width: 288px;">
-                            <section><a target="_blank" href="https://www.tiktok.com/@tony_carlos_law">@tony_carlos_law</a></section>
-                        </blockquote>
-                    `;
-                    const script = document.createElement('script');
-                    script.src = 'https://www.tiktok.com/embed.js';
-                    script.async = true;
-                    document.body.appendChild(script);
-                }, 100);
-            }
-        });
-    }
-
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
 
