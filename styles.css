@@ -716,7 +716,7 @@ section {
     font-size: 0.95rem;
 }
 
-/* Social Section (TikTok & Yelp) */
+/* Social Section (Yelp) */
 .social-section {
     padding: 5rem 0;
     background: var(--bg);
@@ -749,7 +749,6 @@ section {
     color: var(--primary);
 }
 
-.tiktok-embed-wrapper,
 .yelp-embed-wrapper {
     min-height: 300px;
     display: flex;
@@ -761,9 +760,6 @@ section {
     overflow: hidden;
 }
 
-.tiktok-embed-wrapper blockquote {
-    margin: 0;
-}
 
 .yelp-embed-wrapper a {
     color: var(--primary);
@@ -2208,3 +2204,6 @@ section {
         margin-top: 0.5rem;
     }
 }
+
+/* Social grid now holds a single card */
+.social-grid--single { grid-template-columns: minmax(0, 640px); justify-content: center; }
